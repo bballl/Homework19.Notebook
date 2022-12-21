@@ -1,0 +1,31 @@
+﻿@page
+@model Notebook.Web.Pages.IndexModel
+
+<head>
+    <title>Записная книжка</title>
+</head>
+
+<h2 style="margin-left:50px;">Записная книжка</h2>
+
+<body style="margin-left:50px;">
+    <p class="fontStyle">
+        <table cellpadding="7" border="1">
+            
+            <tr style="margin-left:100px;" bgcolor="#9ACD32">
+                <td style ="margin-left:20px;"><strong>ID</strong></td>
+                <td><strong>Фамилия</strong></td>
+                <td><strong>Имя</strong></td>
+                <td><strong>Отчество</strong></td>
+            </tr>
+            @foreach (var e in Model.list)
+            {
+                <tr bgcolor="	#F0FFF0">
+                    <td><strong>@e.Id</strong></td>
+                    <td><strong>@e.LastName</strong></td>
+                    <td><strong>@e.FirstName</strong></td>
+                    <td><strong>@e.MiddleName</strong></td>
+                </tr>
+            }
+        </table>
+    </p>
+</body>
